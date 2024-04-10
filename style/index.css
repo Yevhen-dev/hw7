@@ -26,7 +26,6 @@ a {
 .container {
     position: relative;
     max-width: 1620px;
-    /* overflow-x: hidden; */
 }
 
 .header {
@@ -305,7 +304,6 @@ a {
     padding: 20px 0;
     border-radius: 0 0 30px 30px;
     transition: all .3s ease;
-    /* transform: translateY(-101%); */
     opacity: 0;
 }
 
@@ -577,7 +575,7 @@ a {
 
 @media ( max-width: 768px ) {
     html {
-        font-size: 5px;
+        font-size: 6px;
     }
 
     .gallery {
@@ -587,11 +585,13 @@ a {
     .gallery__kid-brush, 
     .gallery__kid-seat {
         padding: 10px 0;
+        width: 100%;
     }
 
     .gallery__hat-brush,
     .gallery__spray-scissors {
         animation: none;
+        width: 50%;
     }
 
     .gallery__hat-brush--hat {
@@ -661,12 +661,30 @@ a {
     }
 
     .services__works {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        width: 100%;
     }
 
     .team__list {
         flex-direction: column;
         align-items: center;
+    }
+
+    .team__list__person img {
+        width: 100%;
+    }
+
+    .team__list__person-name {
+        width: 100%;
+    }
+    
+    .active::after {
+        width: 100%;
+        left: 0;
+    }
+   
+    .footer {
+        padding: 0 50px;
     }
 
     .footer__touch-map__touch {
@@ -677,13 +695,15 @@ a {
     }
 
     .footer__contacts {
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: block;
+        align-items: center;
+        font-size: 3rem;
     }
 
     .footer__contacts__phone-text, 
     .footer__contacts__hours, 
     .footer__contacts__social {
-        width: 43%;
+        width: 70%;
+        padding-bottom: 15px;
     }
 }
